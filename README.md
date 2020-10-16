@@ -1,1 +1,3 @@
 # actionContextExploration
+GitHub Actions deals with contexts.
+I was wondering what all the details mentioned in the doc are in the wild so I decided to explore...
