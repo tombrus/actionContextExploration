@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: "checkout"
         uses: actions/checkout@v1
+        
+      - uses: ModelingValueGroup/env-try-action@master
 
       - name: "attach git head"
         run: git checkout "${GITHUB_REF#refs/heads/}"
