@@ -31,7 +31,7 @@ jobs:
           echo "    github.token            : ${{github.token}}"
           echo "    github.workflow         : ${{github.workflow}}"
           echo "    github.workspace        : ${{github.workspace}}"
-          echo "GITHUB_TOKEN=$GITHUB_TOKEN"
+          echo "GITHUB_TOKEN=${GITHUB_TOKEN:-alas not set}"
           set | fgrep '${{github.token}}'
           set | fgrep -i github
 
