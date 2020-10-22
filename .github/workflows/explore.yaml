@@ -35,5 +35,6 @@ jobs:
           set | fgrep '${{github.token}}' || echo "no token in env"
           set | fgrep -i github
           
-          find / -type f ! -name \*.jar ! -name \*.zip -exec fgrep '${{github.token}}' {} + 2>/dev/null
+          #find / -type f ! -name \*.jar ! -name \*.zip -exec fgrep '${{github.token}}' {} + 2>/dev/null
+          ls -l /*
 
