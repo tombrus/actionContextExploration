@@ -3,6 +3,8 @@ on  : [push]
 jobs:
   explore:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
     steps:
       - name: "checkout"
         uses: actions/checkout@v1
@@ -35,6 +37,6 @@ jobs:
           set | fgrep '${{github.token}}' || echo "no token in env"
           set | fgrep -i github
           
-          ls -l /
-          find /data /home -type f ! -name \*.jar ! -name \*.zip -exec fgrep '${{github.token}}' {} + 2>/dev/null
+          #ls -l /
+          #find /data /home -type f ! -name \*.jar ! -name \*.zip -exec fgrep '${{github.token}}' {} + 2>/dev/null
 
